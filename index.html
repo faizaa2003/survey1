@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+
+<h2>SURVEY FORM</h2>
+<p>Let us know how we can improve</p>
+
+<form action="/submit_form" method="post" enctype="multipart/form-data">
+    <table>
+
+        <tr>
+            <td>* Name:</td>
+            <td><input type="text" id="name" name="name" required></td>
+        </tr>
+
+        <tr>
+            <td>* Email:</td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+
+        <tr>
+            <td>* Age:</td>
+            <td><input type="number" id="age" name="age" required></td>
+        </tr>
+
+        <tr>
+            <td>Upload File:</td>
+            <td><input type="file" id="file" name="file"></td>
+        </tr>
+
+        <tr>
+            <td>Which option best describes your current role?</td>
+            <td>
+                <select id="role" name="role">
+                    <option value="student">Student</option>
+                    <option value="professional">Professional</option>
+                    <option value="other">Other</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>* How likely is it that you would recommend this program to a friend?</td>
+            <td>
+                <input type="radio" id="definitely" name="recommend" value="definitely" required>
+                <label for="definitely">Definitely</label><br>
+                <input type="radio" id="maybe" name="recommend" value="maybe">
+                <label for="maybe">Maybe</label><br>
+                <input type="radio" id="not_sure" name="recommend" value="not_sure">
+                <label for="not_sure">Not sure</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>What do you like most here:</td>
+            <td>
+                <select id="like_most" name="like_most">
+                    <option value="lectures">Lectures</option>
+                    <option value="assignments">Assignments</option>
+                    <option value="projects">Projects</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Things that should be improved in the future (Check all that apply):</td>
+            <td>
+                <input type="checkbox" id="frontend" name="improve[]" value="frontend">
+                <label for="frontend">Front-end Projects</label><br>
+                <input type="checkbox" id="backend" name="improve[]" value="backend">
+                <label for="backend">Back-end Projects</label><br>
+                <input type="checkbox" id="dataviz" name="improve[]" value="dataviz">
+                <label for="dataviz">Data Visualization</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Any Comments or Suggestions?</td>
+            <td><textarea id="comments" name="comments" rows="4" cols="40"></textarea></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center;"><input type="submit" value="Submit"></td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
